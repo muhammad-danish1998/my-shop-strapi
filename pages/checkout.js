@@ -17,22 +17,7 @@ const products = [
 ]
 
 export default function Example({ cart }) {
-  const [redirecting, setRedirecting] = useState(false);
-
-  const redirectToCheckout = async () => {
-    // Create Stripe checkout
-    const {
-      data: { id },
-    } = await axios.post('/api/checkout_sessions', {
-      items: Object.entries(cartDetails).map(([_, { id, quantity }]) => ({
-        price: id,
-        quantity,
-      })),
-    });
-     // Redirect to checkout
-     const stripe = await getStripe();
-     await stripe.redirectToCheckout({ sessionId: id });
-  }
+  
 
   const [subtotal, setSubtotal] = useState(0);
   const [form, setForm] = useState({
@@ -212,8 +197,7 @@ export default function Example({ cart }) {
 
               <button
                 type="submit"
-                onClick={redirectToCheckout}
-                disabled={redirecting}
+               
                 className="mt-6 w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed"
               >
                Pay Now
