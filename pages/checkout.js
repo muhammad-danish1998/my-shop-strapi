@@ -1,7 +1,6 @@
-
 import { UserIcon } from '@heroicons/react/outline'
 import { useEffect, useState } from 'react';
-
+import { checkout } from "../checkout"
 const products = [
   {
     id: 1,
@@ -17,14 +16,14 @@ const products = [
 ]
 
 export default function Example({ cart }) {
-  
+
 
   const [subtotal, setSubtotal] = useState(0);
   const [form, setForm] = useState({
-    name:"",
-    email:"",
-    phone:"",
-    message:""
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
   });
 
   useEffect(() => {
@@ -182,7 +181,7 @@ export default function Example({ cart }) {
                 <div className="flex items-center h-5">
                   <input
                     onChange={handleChange}
-                
+
                     id="terms"
                     name="terms"
                     type="checkbox"
@@ -195,15 +194,34 @@ export default function Example({ cart }) {
                 </label>
               </div>
 
-              <button
-                type="submit"
+              {/* <button
                
+                onClick={(() => {
+                  checkout({
+                    lineItems: [
+                      {
+                        price: "price_1LVYN2DTHFEX3w3fPxFppdDC",
+                        quantity: 1
+                      }
+                    ]
+                  })
+                })}
                 className="mt-6 w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed"
               >
-               Pay Now
-              </button>
+                Pay Now
+              </button> */}
+              
             </form>
-
+            <button onClick={(() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1LVYN2DTHFEX3w3fPxFppdDC",
+                    quantity: 1
+                  }
+                ]
+              })
+            })}>BUY!</button>
 
           </div>
         </div>
