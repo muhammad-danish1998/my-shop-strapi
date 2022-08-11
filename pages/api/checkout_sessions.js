@@ -1,7 +1,10 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
+    let headers = {
+        Authorization: `Bearer d4ee7a87c03c1740c53479783dffa8fe9b6a71e34aef1d64efad6416a66de660e20030bc852f952ebd77ebd138d22bfd2a95d213184f42f6074df9a850cf1e6b2d3d861c445e0cc9b489fc7b7dc44cabf02823147b0b52c28947526a1a8a35b6a86615f9bbe3c00873f7bffe228b117a5d68ed3f08829e1e02281bb46b99661c`
+      }
+  if (req.method === 'POST',{ headers: headers }) {
     try {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
