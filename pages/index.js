@@ -7,9 +7,10 @@ import ProductList from '../components/ProductList'
 
 import styles from '../styles/Home.module.css'
 import Product from './products'
-let domain = 'http://localhost:1337'
+let domain = 'https://floating-tor-98206.herokuapp.com/'
 
 export default function Home(props) {
+  console.log("propssssss------",props)
   //  const[dataRes , setData] =  useState(props.products);
   // const [apiData] = props.products.data;
 
@@ -55,9 +56,9 @@ export default function Home(props) {
 }
 export async function getServerSideProps(context) {
   let headers = {
-    Authorization: `Bearer 7acd9cd9a8ee2c59f81ba2885ad6c832e77a9fee50a2a4760ae560d78db808393081183348268c6b949fa68a5e4bdbc4e14885a477f4f8ded9d848d46336627673da06620c1a6c455278a44109b35face01101947e120669aba86551369b3fb3af12eeb00797711bea33d2d627834b348be301f4f65b8d5f23c286752e62eabf`
+    Authorization: `Bearer d4ee7a87c03c1740c53479783dffa8fe9b6a71e34aef1d64efad6416a66de660e20030bc852f952ebd77ebd138d22bfd2a95d213184f42f6074df9a850cf1e6b2d3d861c445e0cc9b489fc7b7dc44cabf02823147b0b52c28947526a1a8a35b6a86615f9bbe3c00873f7bffe228b117a5d68ed3f08829e1e02281bb46b99661c`
   }
-  const res = await fetch(`http://localhost:1337/api/products?populate=*`, { headers: headers })
+  const res = await fetch(`https://floating-tor-98206.herokuapp.com/api/products?populate=*`, { headers: headers })
   const products = await res.json()
 
   return {
