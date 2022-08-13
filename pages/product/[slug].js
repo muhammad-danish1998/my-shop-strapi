@@ -149,7 +149,7 @@ export default function Example({ product, addToCart }) {
                       <StarIcon
                         key={ratingarr}
                         className={classNames(
-                          product.attributes.rating > ratingarr ? 'text-indigo-500' : 'text-gray-300',
+                          product.attributes.rating > ratingarr ? 'text-yellow-500' : 'text-gray-300',
                           'h-5 w-5 flex-shrink-0'
                         )}
                         aria-hidden="true"
@@ -174,14 +174,14 @@ export default function Example({ product, addToCart }) {
                   <button
                     onClick={() => { addToCart(slug, 1, product.attributes.price, product.attributes.image.data[0].attributes.name) }}
                     type="button"
-                    className="max-w-xs flex-1 bg-indigo-600 border border-transparent rounded-md  flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500 sm:w-full"
+                    className="max-w-xs flex-1  text-gray-600   border-1 border-gray-400 border border-transparent rounded-md  flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white  btn hover:text-white  hover:bg-red-400 sm:w-full"
                   >
                     Add to Cart
                   </button>
                   <Link href="/checkout">
                     <button
                       type="submit"
-                      className="max-w-xs flex-1 ml-2 bg-indigo-600 border border-transparent rounded-md  flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500 sm:w-full"
+                      className="max-w-xs flex-1 ml-2 text-gray-600  border-1 border-gray-400 border border-transparent rounded-md  flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white  btn hover:text-white  hover:bg-red-400 sm:w-full"
                     >
                       Checkout
                     </button>

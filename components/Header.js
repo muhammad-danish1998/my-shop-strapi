@@ -55,17 +55,17 @@ export default function Header({cart}) {
                   Home
                 </a>
               </Link>
-              <Link href="/product">
+              <Link href="/">
                 <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                   Product
                 </a>
               </Link>
-              <Link href="/about">
+              <Link href="/">
                 <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                   About
                 </a>
               </Link>
-              <Link href='/contact'>
+              <Link href='/'>
                 <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                   Contact
                 </a>
@@ -138,17 +138,17 @@ export default function Header({cart}) {
                       Home
                     </a>
                   </Link>
-                  <Link href="/template">
+                  <Link href="/">
                     <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                       Product
                     </a>
                   </Link>
-                  <Link href="/feature">
+                  <Link href="/">
                     <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                       About
                     </a>
                   </Link>
-                  <Link href="/whycapabara">
+                  <Link href="/">
                     <a className="text-base font-medium text-gray-500 hover:text-orange-600">
                       Contact
                     </a>

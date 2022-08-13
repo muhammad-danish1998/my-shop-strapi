@@ -81,7 +81,7 @@ export default function Example({ cart }) {
                           <p className="hidden text-gray-500 sm:block">{product.color}</p>
                           <p className="hidden text-gray-500 sm:block">{product.size}</p>
                         </div>
-                        <div className="flex-none flex space-x-4">
+                        {/* <div className="flex-none flex space-x-4">
                           <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                             Edit
                           </button>
@@ -90,7 +90,7 @@ export default function Example({ cart }) {
                               Remove
                             </button>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </li>
